@@ -125,10 +125,6 @@
 					</from>
 					<to>
 						<image>rebsviana/${project.artifactId}:${project.version}</image>
-						<auth>
-							<username>rebsviana</username>
-							<password>dckr_pat_XTc7Y-_i8Jqg8CGH9ugc23iBqO8</password>
-						</auth>
 					</to>
 					<container>
 						<jvmFlags>
