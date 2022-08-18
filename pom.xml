@@ -68,6 +68,12 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.8</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -79,7 +85,7 @@
 			<plugin>
 			    <groupId>org.jacoco</groupId>
 			    <artifactId>jacoco-maven-plugin</artifactId>
-			    <version>0.8.6</version>
+			    <version>0.8.8</version>
 			    <executions>
 				<execution>
 				    <id>prepare-agent</id>
@@ -99,7 +105,7 @@
 			<plugin>
 			    <groupId>org.sonarsource.scanner.maven</groupId>
 			    <artifactId>sonar-maven-plugin</artifactId>
-			    <version>3.7.0.1746</version>
+				<version>3.9.1.2184</version>
 			    <executions>
 				<execution>
 				    <phase>verify</phase>
@@ -108,6 +114,30 @@
 				    </goals>
 				</execution>
 			    </executions>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>2.6.0</version>
+				<configuration>
+					<from>
+						<image>openjdk@sha256:fb54ed3516242995d86c53346463a3509f9baf74a9178c066bdbcc5c1bdafc66</image>
+					</from>
+					<to>
+						<image>rebsviana/${project.artifactId}:${project.version}</image>
+						<auth>
+							<username>rebsviana</username>
+							<password>dckr_pat_XTc7Y-_i8Jqg8CGH9ugc23iBqO8</password>
+						</auth>
+					</to>
+					<container>
+						<jvmFlags>
+							<jvmFlag>-Xms256m</jvmFlag>
+							<jvmFlag>-Xmx512m</jvmFlag>
+						</jvmFlags>
+						<mainClass>io.github.rebecabfv.desafio_BD</mainClass>
+					</container>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -63,5 +63,8 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 11
-    - name: Build with Maven
-      run: mvn --batch-mode --update-snapshots package
+    - name: Build Project, create docker image and send image to dockerhub
+      env:
+        DOCKERHUB_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
+        DOCKERHUB_TOKEN: ${{secrets.DOCKERHUB_TOKEN}}
+      run: mvn -B package jib:build -DskipTests
