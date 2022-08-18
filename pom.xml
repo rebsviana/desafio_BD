@@ -126,6 +126,12 @@
 					<to>
 						<image>rebsviana/${project.artifactId}:${project.version}</image>
 					</to>
+					<auth>
+						<!--suppress UnresolvedMavenProperty -->
+						<username>${env.DOCKERHUB_USERNAME}</username>
+						<!--suppress UnresolvedMavenProperty -->
+						<password>${env.DOCKERHUB_TOKEN}</password>
+					</auth>
 					<container>
 						<jvmFlags>
 							<jvmFlag>-Xms256m</jvmFlag>
