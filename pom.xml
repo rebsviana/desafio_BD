@@ -126,12 +126,10 @@
 					<to>
 						<image>rebsviana/${project.artifactId}:${project.version}</image>
 					</to>
-					<auth>
-						<!--suppress UnresolvedMavenProperty -->
-						<username>${env.DOCKERHUB_USERNAME}</username>
-						<!--suppress UnresolvedMavenProperty -->
-						<password>${env.DOCKERHUB_TOKEN}</password>
-					</auth>
+						<auth>
+							<username>rebsviana</username>
+							<password>dckr_pat_XTc7Y-_i8Jqg8CGH9ugc23iBqO8</password>
+						</auth>
 					<container>
 						<jvmFlags>
 							<jvmFlag>-Xms256m</jvmFlag>
