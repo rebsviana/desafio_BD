@@ -125,11 +125,11 @@
 					</from>
 					<to>
 						<image>rebsviana/${project.artifactId}:${project.version}</image>
-					</to>
 						<auth>
 							<username>rebsviana</username>
 							<password>dckr_pat_XTc7Y-_i8Jqg8CGH9ugc23iBqO8</password>
 						</auth>
+					</to>
 					<container>
 						<jvmFlags>
 							<jvmFlag>-Xms256m</jvmFlag>
